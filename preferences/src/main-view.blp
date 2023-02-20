@@ -1,0 +1,127 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.Window {
+  default-width: 360;
+
+  styles [
+    "preferences",
+  ]
+
+  Box {
+    orientation: vertical;
+
+    HeaderBar {
+      styles [
+        "flat",
+      ]
+
+      title-widget: Adw.WindowTitle {
+        visible: false;
+      };
+
+      [end]
+      Button {
+        icon-name: "system-search-symbolic";
+      }
+    }
+
+    ScrolledWindow {
+      vexpand: true;
+
+      Adw.Clamp {
+        Box {
+          orientation: vertical;
+
+          styles [
+            "main-view",
+          ]
+
+          Adw.Avatar {
+            size: 128;
+            text: "Attilio";
+            show-initials: true;
+          }
+
+          Label {
+            label: "Attilio";
+
+            styles [
+              "title-1",
+            ]
+          }
+
+          Label {
+            label: "+39 012 345 6789 • @attilio";
+          }
+
+          Button {
+            label: "Edit";
+            halign: center;
+
+            styles [
+              "edit",
+            ]
+          }
+
+          Box {
+            orientation: vertical;
+
+            Adw.PreferencesGroup {
+              Adw.ActionRow {
+                title: "Notifications";
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Privacy &amp; Security";
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Data &amp; Storage";
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+            }
+
+            Adw.PreferencesGroup {
+              Adw.ActionRow {
+                title: "Chat Folders";
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Appearance";
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Stickers";
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

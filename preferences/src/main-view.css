@@ -1,0 +1,18 @@
+window.preferences .main-view {
+  margin: 12px;
+  border-spacing: 6px;
+}
+
+window.preferences .main-view > box {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  border-spacing: 18px;
+}
+
+window.preferences .main-view > button.edit {
+  color: @accent_color;
+  border-radius: 999px;
+  padding: 3px 18px;
+  margin-top: 3px;
+}
+
