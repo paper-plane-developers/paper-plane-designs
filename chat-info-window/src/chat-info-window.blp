@@ -1,0 +1,174 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.Window {
+  default-width: 360;
+
+  styles [
+    "chat-info",
+  ]
+
+  Box {
+    orientation: vertical;
+
+    HeaderBar {
+      styles [
+        "flat",
+      ]
+
+      title-widget: Adw.WindowTitle {
+        visible: false;
+      };
+    }
+
+    ScrolledWindow {
+      vexpand: true;
+
+      Adw.Clamp {
+        Box {
+          orientation: vertical;
+
+          styles [
+            "main-view",
+          ]
+
+          Adw.Avatar {
+            size: 128;
+          }
+
+          Label {
+            label: "Telegrand";
+
+            styles [
+              "title-1",
+            ]
+          }
+
+          Label {
+            label: "200 members, 75 online";
+          }
+
+          Button {
+            label: "Edit";
+            halign: center;
+
+            styles [
+              "edit",
+            ]
+          }
+
+          Box {
+            orientation: vertical;
+
+            Adw.PreferencesGroup {
+              Adw.ActionRow {
+                title: "Link";
+                subtitle: "https://t.me/telegrandchat";
+
+                styles [
+                  "property",
+                ]
+              }
+
+              Adw.ActionRow {
+                title: "Description";
+                subtitle: "Telegram client for GNOME\n\nhttps://github.com/melix99/telegrand";
+
+                styles [
+                  "property",
+                ]
+              }
+            }
+
+            Adw.PreferencesGroup {
+              Adw.ActionRow {
+                title: "Members";
+
+                Label {
+                  label: "200";
+                }
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Media";
+
+                Label {
+                  label: "1846";
+                }
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Files";
+
+                Label {
+                  label: "124";
+                }
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Music";
+
+                Label {
+                  label: "12";
+                }
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Voice";
+
+                Label {
+                  label: "27";
+                }
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "Links";
+
+                Label {
+                  label: "1284";
+                }
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+
+              Adw.ActionRow {
+                title: "GIFs";
+
+                Label {
+                  label: "334";
+                }
+
+                Image {
+                  icon-name: "go-next-symbolic";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

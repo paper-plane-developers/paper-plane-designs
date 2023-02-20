@@ -1,0 +1,28 @@
+window.chat-info .main-view {
+  margin: 12px;
+  border-spacing: 6px;
+}
+
+window.chat-info .main-view > box {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  border-spacing: 18px;
+}
+
+window.chat-info .main-view > button.edit {
+  color: @accent_color;
+  border-radius: 999px;
+  padding: 3px 18px;
+  margin-top: 3px;
+}
+
+/* This will arrive in libadwaita at some point */
+row.property label.title {
+  font-size: smaller;
+  opacity: 0.55;
+}
+row.property label.subtitle {
+  font-size: 11pt;
+  opacity: 1;
+}
+
