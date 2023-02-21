@@ -1,0 +1,177 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.Window {
+  default-width: 360;
+
+  Box {
+    orientation: vertical;
+
+    Adw.ViewStack stack {
+      vexpand: true;
+
+      Adw.ViewStackPage {
+        title: "Media";
+        icon-name: "image-round-symbolic";
+        child: Box {
+          orientation: vertical;
+
+          HeaderBar {
+            styles [
+              "flat",
+            ]
+
+            title-widget: Adw.WindowTitle {
+              title: "Media";
+            };
+
+            [start]
+            Button {
+              icon-name: "list-add-symbolic";
+            }
+          }
+
+          Grid {
+            column-homogeneous: true;
+
+            Overlay {
+              child: Adw.Bin {
+                styles [
+                  "red",
+                ]
+              };
+
+              [overlay]
+              CheckButton {
+                halign: end;
+                valign: start;
+
+                styles [
+                  "selection-mode",
+                ]
+              }
+            }
+
+            Overlay {
+              child: Adw.Bin {
+                styles [
+                  "green",
+                ]
+              };
+
+              [overlay]
+              CheckButton {
+                halign: end;
+                valign: start;
+
+                styles [
+                  "selection-mode",
+                ]
+              }
+            }
+
+            Overlay {
+              child: Adw.Bin {
+                styles [
+                  "orange",
+                ]
+              };
+
+              [overlay]
+              CheckButton {
+                halign: end;
+                valign: start;
+
+                styles [
+                  "selection-mode",
+                ]
+              }
+            }
+          }
+        };
+      }
+
+      Adw.ViewStackPage {
+        title: "File";
+        icon-name: "paper-filled-symbolic";
+        child: Box {
+          orientation: vertical;
+
+          HeaderBar {
+            styles [
+              "flat",
+            ]
+
+            title-widget: Adw.WindowTitle {
+              title: "File";
+            };
+          }
+        };
+      }
+
+      Adw.ViewStackPage {
+        title: "Position";
+        icon-name: "map-marker-symbolic";
+        child: 
+        Box {
+          orientation: vertical;
+
+          HeaderBar {
+            styles [
+              "flat",
+            ]
+
+            title-widget: Adw.WindowTitle {
+              title: "Position";
+            };
+          }
+        };
+      }
+
+      Adw.ViewStackPage {
+        title: "Contact";
+        icon-name: "person2-symbolic";
+        child: Box {
+          orientation: vertical;
+
+          HeaderBar {
+            styles [
+              "flat",
+            ]
+
+            title-widget: Adw.WindowTitle {
+              title: "Contact";
+            };
+          }
+        };
+      }
+    }
+
+    Stack {
+      Adw.ViewSwitcherBar {
+        stack: stack;
+        reveal: true;
+      }
+
+      Box {
+        styles [
+          "toolbar",
+        ]
+
+        Entry {
+          hexpand: true;
+          placeholder-text: "Caption";
+        }
+
+        Button {
+          label: "Send";
+
+          styles [
+            "suggested-action",
+          ]
+        }
+      }
+    }
+  }
+}
+

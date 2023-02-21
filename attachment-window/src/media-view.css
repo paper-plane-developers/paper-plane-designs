@@ -1,0 +1,24 @@
+grid {
+  padding: 2px;
+}
+
+grid > overlay {
+  min-height: 115px;
+  margin: 2px;
+}
+
+.red {
+  background: @red_3;
+}
+
+.green {
+  background: @green_3;
+}
+
+.orange {
+  background: @orange_3;
+}
+
+.toolbar > entry, .toolbar > button {
+  border-radius: 999px;
+}
