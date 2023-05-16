@@ -1,0 +1,53 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.Window window {
+  default-width: 360;
+  modal: true;
+  content: Box {
+    orientation: vertical;
+    baseline-position: top;
+    HeaderBar {
+      styles ["flat"]
+      title-widget: Box {
+        spacing: 4;
+        styles ["translate"]
+        Label {
+          use-markup: true;
+          xalign: 0;
+          label: "<b>Translate</b>";
+        }
+        Label {
+            use-markup: true;
+            xalign: 0;
+            label: "<b>English</b>";
+          }
+        Image {
+          icon-name: "arrow1-right-symbolic";
+        }
+        Button {
+          styles ["image-button"]
+          label: "English";
+        }
+      };
+    }
+    Adw.Clamp {
+      maximum-size: 600;
+      Box {
+        orientation: vertical;
+        Label {
+          label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n Quis viverra nibh cras pulvinar mattis nunc. Dui ut ornare lectus sit amet est placerat in egestas. Cursus sit amet dictum sit amet justo.";
+          wrap: true;
+          wrap-mode: word_char;
+          styles ["translation-card", "card"]
+        }
+        Label {
+          label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n Quis viverra nibh cras pulvinar mattis nunc. Dui ut ornare lectus sit amet est placerat in egestas. Cursus sit amet dictum sit amet justo.";
+          wrap: true;
+          wrap-mode: word_char;
+          styles ["translation-card", "card"]
+        }
+      }
+    }
+  };
+}
